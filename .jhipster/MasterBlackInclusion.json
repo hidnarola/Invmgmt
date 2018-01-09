@@ -1,0 +1,55 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "blackinclusionId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "blackinclusionName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "blackinclusionDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "srNo",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "modifiedOn",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "modifiedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifiedMachineName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "yearEndId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "blackinclusionNameNative",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180105111419",
+    "entityTableName": "master_black_inclusion",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

@@ -1,0 +1,72 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "masterCompanyParty",
+            "otherEntityName": "masterCompanyParty",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "lotCategoryId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lotCategoryCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lotCategoryName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lotCategoryDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifiedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifiedOn",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "modifiedMachineName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "srNo",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "yearEndId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lotCategoryNameNative",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180105123616",
+    "entityTableName": "master_lot_category",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

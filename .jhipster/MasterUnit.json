@@ -1,0 +1,66 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "masterCompanyParty",
+            "otherEntityName": "masterCompanyParty",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "unitId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "unitName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "unitCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "unitDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifiedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifiedOn",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "modifiedMachineName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "srNo",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "yearEndId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "unitNameNative",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180105123615",
+    "entityTableName": "master_unit",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

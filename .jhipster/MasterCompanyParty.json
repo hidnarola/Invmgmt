@@ -1,0 +1,310 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "companyPartyId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "groupCompanyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyPartyName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "categoryCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isSuper",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "company",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "incomeTaxNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "salesTaxNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneOff",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneResi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "website",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "person1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "person2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fax",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifiedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifiedOn",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "modifiedMachineName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "srNo",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "transactionCurrency",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "openingDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "openingRLocalBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "openingRDollarBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "openingRExchangeRate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "netRLocalBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "netRDollarBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "rExchangeRate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "openingPLocalBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "openingPDollarBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "openingPExchangeRate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "netPLocalBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "netPDollarBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "pExchangeRate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "openingPNLocalBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "openingPNDollarBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "openingPNExchangeRate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "sale",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "purchase",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "pN",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "purchaseAdvanceLocal",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "saleAdvanceLocal",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "pNAdvanceLocal",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "purchaseAdvanceDollar",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "saleAdvanceDollar",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "pNAdvanceDollar",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "paymentDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "closingDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "creditLimit",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "shikesho",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dueDays",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "salesPersonId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "yearEndId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "companyPartyNameNative",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address1Native",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address2Native",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address3Native",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cityNative",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "countryNative",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180105123614",
+    "entityTableName": "master_company_party",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

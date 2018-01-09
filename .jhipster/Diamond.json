@@ -1,0 +1,146 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "lotId",
+            "otherEntityName": "lot",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "diamond"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "blackinclusionId",
+            "otherEntityName": "masterBlackInclusion",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "colorId",
+            "otherEntityName": "masterColor",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "countryId",
+            "otherEntityName": "masterCountry",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "lotId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "cutId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "colorId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "purityId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "fluorescenceId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "shapeId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "labId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "polishId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "tableIncusionId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "symmetryId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "lusterId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "countryId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "sellingPrice",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "purchasePrice",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "rapnetPrice",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "rapnetDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "totalDepth",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "tablePerecentage",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "crownAngle",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "dSize",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "shadeId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "openinclusionId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "blackinclusionId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "weight",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "yearEndId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "diameter",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20180105111418",
+    "entityTableName": "diamond",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

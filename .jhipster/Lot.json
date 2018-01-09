@@ -1,0 +1,136 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "masterCompanyParty",
+            "otherEntityName": "masterCompanyParty",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "masterUnit",
+            "otherEntityName": "masterUnit",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "masterLotCategory",
+            "otherEntityName": "masterLotCategory",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "masterLotSubCategory",
+            "otherEntityName": "masterLotSubCategory",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "lotId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lotNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lotName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lotDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lotReferance",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lotLocation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lotSubCategoryId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "carats",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "availableCarats",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "reorderQuantity",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "purchase",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "drwgFileName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdOn",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "modifiedOn",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "modifiedBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "modifiedMachineName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "yearEndId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "rapaportLocalRate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "rapaportDollarRate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "gIAFilename",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "refDesignGroupId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "designGroupId",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20180105123613",
+    "entityTableName": "lot",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
