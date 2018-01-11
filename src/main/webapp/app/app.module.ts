@@ -24,6 +24,8 @@ import {
     ActiveMenuDirective,
     ErrorComponent
 } from './layouts';
+import { SearchLotModule } from './search-lot/search-lot.module';
+import { DataEntryModule } from './data-entry/data-entry.module';
 
 @NgModule({
     imports: [
@@ -35,6 +37,8 @@ import {
         InvmgmtAdminModule,
         InvmgmtAccountModule,
         InvmgmtEntityModule,
+        SearchLotModule,
+        DataEntryModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [

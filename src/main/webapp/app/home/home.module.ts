@@ -8,7 +8,7 @@ import { HOME_ROUTE, HomeComponent } from './';
 @NgModule({
     imports: [
         InvmgmtSharedModule,
-        RouterModule.forChild([ HOME_ROUTE ])
+        RouterModule.forChild([HOME_ROUTE])
     ],
     declarations: [
         HomeComponent,
@@ -19,4 +19,4 @@ import { HOME_ROUTE, HomeComponent } from './';
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class InvmgmtHomeModule {}
+export class InvmgmtHomeModule { }

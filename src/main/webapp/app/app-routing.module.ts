@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { errorRoute, navbarRoute } from './layouts';
+import { Routes, RouterModule } from '@angular/router';
+import { UserRouteAccessService } from './shared';
+import { errorRoute } from './layouts';
+
+import { SEARCH_LOT_ROUTE } from './search-lot/searchLot-routing.module'
 
 const LAYOUT_ROUTES = [
-    navbarRoute,
+    SEARCH_LOT_ROUTE,
     ...errorRoute
 ];
 
@@ -15,4 +18,4 @@ const LAYOUT_ROUTES = [
         RouterModule
     ]
 })
-export class InvmgmtAppRoutingModule {}
+export class InvmgmtAppRoutingModule { }

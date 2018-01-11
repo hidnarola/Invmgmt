@@ -3,28 +3,31 @@
     "project": {
         "name": "invmgmt"
     },
-    "apps": [{
-        "root": "src/main/webapp",
-        "outDir": "build/www/app",
-        "assets": [
-            "content",
-            "i18n",
-            "favicon.ico"
-        ],
-        "index": "index.html",
-        "main": "app/app.main.ts",
-        "polyfills": "app/polyfills.ts",
-        "test": "src/test/javascript/spec/entry.ts",
-        "tsconfig": "../../../tsconfig.json",
-        "prefix": "jhi",
-        "mobile": false,
-        "styles": [
-            "content/scss/vendor.scss",
-            "content/scss/global.scss"
-        ],
-        "scripts": []
-    }],
-    "lint": [{
+    "apps": [
+        {
+            "root": "src/main/webapp",
+            "outDir": "build/www/app",
+            "assets": [
+                "content",
+                "i18n",
+                "favicon.ico"
+            ],
+            "index": "index.html",
+            "main": "app/app.main.ts",
+            "polyfills": "app/polyfills.ts",
+            "test": "src/test/javascript/spec/entry.ts",
+            "tsconfig": "../../../tsconfig.json",
+            "prefix": "jhi",
+            "mobile": false,
+            "styles": [
+                "content/scss/vendor.scss",
+                "content/scss/global.scss"
+            ],
+            "scripts": []
+        }
+    ],
+    "lint": [
+        {
             "project": "../../../tsconfig.json"
         },
         {
@@ -39,21 +42,21 @@
     "defaults": {
         "styleExt": "scss",
         "prefixInterfaces": false,
-        "component" : {
-            "inlineStyle" : true,
+        "component": {
+            "inlineStyle": true,
             "inlineTemplate": false,
             "spec": false
         },
-        "directive" : {
+        "directive": {
             "spec": false
         },
-        "guard" : {
+        "guard": {
             "spec": false
         },
-        "pipe" : {
+        "pipe": {
             "spec": false
         },
-        "service" : {
+        "service": {
             "spec": false
         }
     },

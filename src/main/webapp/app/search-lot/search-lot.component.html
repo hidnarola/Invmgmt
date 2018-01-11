@@ -1,0 +1,32 @@
+<div class="ui-g">
+  <div class="ui-g-4">
+    <textarea rows="5" style="width:100%" pInputTextarea autoResize="autoResize" class="ui-g" [(ngModel)]="lot_nos"></textarea>
+    <div class="margin-top-15 text-center">
+      <button pButton type="button" (click)="fnClearSearchLot()" label="Clear"></button>
+      <button pButton type="button" (click)="fnSearchLot()" label="Search"></button>
+      <button pButton type="button" (click)="fnDataEntry()" label="Next"></button>
+      <button pButton type="button" (click)="fnPrintTag()" label="Print Tag"></button>
+    </div>
+  </div>
+  <div class="ui-g-8">
+    <p-dataTable [value]="lots">
+      <p-column header="Sr. No" [sortable]="true" [style]="{'text-align':'center'}">
+        <ng-template let-car="rowIndex" pTemplate="body">
+            {{car+1}}
+        </ng-template>
+      </p-column>
+      <p-column field="lotNo" header="Lot No" [sortable]="true" [style]="{'text-align':'center'}"></p-column>
+      <p-column field="pcs" header="Pcs" [sortable]="true" [style]="{'text-align':'center'}"></p-column>
+      <p-column field="weight" header="Weight" [sortable]="true" [style]="{'text-align':'center'}"></p-column>
+      <p-column field="rate" header="Rate" [sortable]="true" [style]="{'text-align':'center'}"></p-column>
+      <p-column field="amount" header="Amount" [sortable]="true" [style]="{'text-align':'center'}"></p-column>
+      <p-column field="lotRemarks" header="Item Remark" [sortable]="true" [style]="{'text-align':'center'}"></p-column>
+      <p-column field="lotType" header="Item Type" [sortable]="true" [style]="{'text-align':'center'}"></p-column>
+    </p-dataTable>
+    <div class="margin-top-15 text-center">
+        <button pButton type="button" (click)="fnClearSearchLot()" label="Clear"></button>
+        <button pButton type="button" (click)="fnDataEntry()" label="Data Entry"></button>
+        <button pButton type="button" (click)="fnShowCashSale()" label="Show Cash Sale"></button>
+    </div> 
+  </div>
+</div>

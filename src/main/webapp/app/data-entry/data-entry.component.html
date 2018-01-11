@@ -1,0 +1,326 @@
+ {{lot_data|json}}
+<div class="new-dollar">
+  <div class="top-table">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td colspan="3" class="inr-info-sale">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <label class="label-css">Inv No</label>
+                    <div class="input-wrap">
+                      <input type="text" [(ngModel)]="lot_data.invoice_no" placeholder="SE-226" class="input-css" />
+                    </div>
+                  </td>
+                  <td>
+                    <label class="label-css">Ref No</label>
+                    <div class="input-wrap">
+                      <input type="text" [(ngModel)]="lot_data.ref_no" placeholder="JPSE-236" class="input-css" />
+                    </div>
+                  </td>
+                  <td>
+                    <label class="label-css">To</label>
+                    <div class="input-wrap">
+                      <input type="text" [(ngModel)]="lot_data.to" placeholder="Case Sale" class="input-css" />
+                    </div>
+                  </td>
+                  <td>
+                    <label class="label-css">Sale Group</label>
+                    <div class="select-wrap">
+                      <p-dropdown [options]="saleGroups" [(ngModel)]="lot_data.selectedSaleGroup" placeholder="Select Sale Group" optionLabel="name"></p-dropdown>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="label-css">Invoice Date</label>
+            <div class="input-wrap datepicker-input-wrap">
+              <p-calendar [(ngModel)]="lot_data.invoice_date" [minDate]="minDate" [showIcon]="true"></p-calendar>
+            </div>
+          </td>
+          <td>
+            <label class="label-css">Stock Date</label>
+            <div class="input-wrap datepicker-input-wrap">
+              <p-calendar [(ngModel)]="lot_data.stock_date" [minDate]="minDate" [showIcon]="true"></p-calendar>
+            </div>
+          </td>
+          <td>
+            <label class="label-css">Due Date</label>
+            <div class="input-wrap datepicker-input-wrap">
+              <p-calendar [(ngModel)]="lot_data.due_date" [minDate]="minDate" [showIcon]="true"></p-calendar>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="label-css">Type</label>
+            <div class="select-wrap">
+              <label class="label-css">Regular</label>
+            </div>
+          </td>
+          <td>
+            <label class="label-css">Location</label>
+            <div class="select-wrap">
+              <p-dropdown [options]="locations" [(ngModel)]="lot_data.selectedLocation" placeholder="Select Location" optionLabel="locationName"></p-dropdown>
+            </div>
+          </td>
+          <td>
+            <label class="label-css">Category</label>
+            <div class="select-wrap">
+              <p-dropdown [options]="categories" [(ngModel)]="lot_data.selectedCategory" placeholder="Select Category" optionLabel="lotCategoryName"></p-dropdown>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="label-css">Exchange Rate</label>
+            <div class="input-wrap input-icon">
+              <input type="text" placeholder="10.000,0000" class="input-css" />
+              <i class="fa fa-dollar"></i>
+            </div>
+          </td>
+          <td>
+            <label class="label-css">Due Days</label>
+            <div class="input-wrap datepicker-input-wrap">
+              <p-spinner size="30" [(ngModel)]="lot_data.due_days" [min]="0"></p-spinner>
+              <!-- <input type="text" name="" placeholder="10" class="input-css" />
+              <i class="fa fa-plus"></i> -->
+            </div>
+          </td>
+          <td>
+            <label class="label-css">Sale Person</label>
+            <div class="select-wrap">
+              <p-dropdown [options]="sale_persons" [(ngModel)]="lot_data.selectedSalePerson" placeholder="Select Sale Person" optionLabel="salesPersonName"></p-dropdown>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="btm-table">
+    <p-dataTable [value]="selected_lots">
+      <p-column header="Sr. No" [style]="{'text-align':'center'}">
+        <ng-template let-car="rowIndex" pTemplate="body">
+          {{car+1}}
+        </ng-template>
+      </p-column>
+      <p-column header="Lot No" [style]="{'text-align':'center'}">
+        <ng-template let-car="rowData" pTemplate="body">
+          <input type="text" class="input-css" [(ngModel)]="rowData.lotNo" />
+        </ng-template>
+      </p-column>
+      <p-column header="Pcs" [style]="{'text-align':'center'}">
+        <ng-template let-car="rowData" pTemplate="body">
+          <input type="text" class="input-css" [(ngModel)]="rowData.pcs" />
+        </ng-template>
+      </p-column>
+      <p-column header="Weight" [style]="{'text-align':'center'}">
+          <ng-template let-car="rowData" pTemplate="body">
+              <input type="text" class="input-css" [(ngModel)]="rowData.weight" />
+            </ng-template>
+      </p-column>
+      <p-column header="Rate" [style]="{'text-align':'center'}">
+          <ng-template let-car="rowData" pTemplate="body">
+              <input type="text" class="input-css" [(ngModel)]="rowData.rate" />
+            </ng-template>
+      </p-column>
+      <p-column header="Amount" [style]="{'text-align':'center'}">
+          <ng-template let-car="rowData" pTemplate="body">
+              <input type="text" class="input-css" [(ngModel)]="rowData.amount" />
+            </ng-template>
+      </p-column>
+      <p-column header="Item Remark" [style]="{'text-align':'center'}">
+          <ng-template let-car="rowData" pTemplate="body">
+              <input type="text" class="input-css" [(ngModel)]="rowData.lotRemarks" />
+            </ng-template>
+      </p-column>
+      <p-column header="Item Type" [style]="{'text-align':'center'}">
+          <ng-template let-car="rowData" pTemplate="body">
+              <input type="text" class="input-css" [(ngModel)]="rowData.lotType" />
+            </ng-template>
+      </p-column>
+    </p-dataTable>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Sr. No</th>
+          <th>Lot. No</th>
+          <th>Pcs</th>
+          <th>Quantity</th>
+          <th>Rate/Unit</th>
+          <th>Amount In</th>
+          <th>Remark</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="35106" class="input-css" />
+            </div>
+          </td>
+          <td>
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="04" class="input-css" />
+            </div>
+          </td>
+          <td>
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="1.0" class="input-css" />
+            </div>
+          </td>
+          <td>
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="300.00" class="input-css" />
+            </div>
+          </td>
+          <td>
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="300.00" class="input-css" />
+            </div>
+          </td>
+          <td>
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="-" class="input-css" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="3" class="local-hkd">
+            <div class="select-wrap">
+              <select class="selectpicker">
+                <option>Local HKD</option>
+                <option>Local HKD</option>
+                <option>Local HKD</option>
+              </select>
+            </div>
+          </td>
+          <td colspan="1">
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="300.00" class="input-css" />
+            </div>
+          </td>
+          <td class="local-dr">
+            <div class="select-wrap">
+              <select class="selectpicker">
+                <option>Dr 01</option>
+                <option>Dr 02</option>
+                <option>Dr 03</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="3" class="local-hkd">
+            <div class="select-wrap">
+              <select class="selectpicker">
+                <option>Local HKD</option>
+                <option>Local HKD</option>
+                <option>Local HKD</option>
+              </select>
+            </div>
+          </td>
+          <td colspan="1">
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="300.00" class="input-css" />
+            </div>
+          </td>
+          <td class="local-dr">
+            <div class="select-wrap">
+              <select class="selectpicker">
+                <option>Cr 01</option>
+                <option>Cr 02</option>
+                <option>Cr 03</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="3" class="total-subtotal">
+            <label class="label-css">Sub Total</label>
+          </td>
+          <td colspan="2" class="total-subtotal-input">
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="300.00" class="input-css" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="2" class="total-subtotal">
+            <label class="label-css">C. Tax(%)</label>
+          </td>
+          <td class="total-subtotal">
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="300.00" class="input-css" />
+            </div>
+          </td>
+          <td colspan="2" class="total-subtotal-input">
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="300.00" class="input-css" />
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="3" class="total-subtotal">
+            <label class="label-css">Narration</label>
+          </td>
+          <td colspan="2" class="total-subtotal-input">
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="300.00" class="input-css" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="7" class="narration">
+            <label class="label-css">Narration</label>
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="narration" class="input-css" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="number-item">
+            <label class="label-css">No of Item</label>
+            <div class="input-wrap">
+              <input type="text" name="" placeholder="11" class="input-css" />
+            </div>
+          </td>
+          <td colspan="5" class="add-lot">
+            <div class="export-type ">
+              <div class="radiobox">
+                <input id="add-lot" type="radio" name="gender" value="add-lot">
+                <label for="add-lot">Add Lot</label>
+                <input id="add-ledger" type="radio" name="gender" value="add-ledger">
+                <label for="add-ledger">Add Ledger</label>
+              </div>
+            </div>
+            <div class="checkbox">
+              <input id="check1" type="checkbox" name="check" value="check1">
+              <label for="check1">Continues Anyway</label>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="btm-button">
+    <button type="submit">Back</button>
+    <button type="submit">Add</button>
+    <button type="submit">Next</button>
+  </div>
+</div>
